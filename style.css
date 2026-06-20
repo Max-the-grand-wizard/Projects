@@ -1,4 +1,4 @@
-/* ===== CSS VARIABLER ===== */
+/*  CSS VARIABLER */
 :root {
     --primary: #7c3aed;
     --primary-light: #b980f0;
@@ -12,6 +12,8 @@
     --text-body: #e2e2e6;
     --text-desc: #d4d4d8;
     --border-color: rgba(124, 58, 237, 0.3);
+    --bubble-bg: rgba(255, 255, 255, 0.06);
+    --bubble-border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -122,11 +124,91 @@ h1:hover::after {
     border-bottom-color: var(--primary-light);
 }
 
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(139, 92, 246, 0.2));
+    border-color: rgba(124, 58, 237, 0.5);
+    box-shadow: 0 8px 40px rgba(124, 58, 237, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 700px) {
+    .nav-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        flex: 1 1 auto;
+        min-width: 120px;
+        text-align: center;
+    }
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.category-section {
+    scroll-margin-top: 2rem;
+    margin-bottom: 3rem;
+    background: var(--bubble-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--bubble-border);
+    border-radius: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.category-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* PROJEKTKORT */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.8rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .project-card {
@@ -303,7 +385,8 @@ hr {
     border-color: var(--primary);
 }
 
-/* ===== ANIMATIONS ===== */
+/*  ANIMATIONS  */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -315,7 +398,7 @@ hr {
     }
 }
 
-/* ===== SCROLLBAR ===== */
+/*  SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -334,7 +417,8 @@ hr {
     background: var(--primary-light);
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
+
 @media (max-width: 700px) {
     h1 {
         font-size: 1.8rem;
@@ -346,5 +430,19 @@ hr {
     
     body {
         padding: 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .category-title {
+        font-size: 1.4rem;
+    }
+
+    .category-section {
+        padding: 1.2rem 1rem 0.5rem 1rem;
+        border-radius: 1.2rem;
     }
 }
