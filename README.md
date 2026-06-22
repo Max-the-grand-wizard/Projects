@@ -19,13 +19,14 @@ Jag är en webbutvecklare som gillar att   att skapa responsiva, användarvänli
 
 | Kategori | Tekniker |
 |----------|----------|
-| **Frontend** | HTML5, CSS3, JavaScript, Bootstrap 5, jQuery, Vue.js, React Native |
+| **Frontend** | HTML5, CSS3, JavaScript, Bootstrap 5, jQuery, React Native |
+| **Framework** | React, Angular, Vue.js, Next.js,  |
 | **Backend** | ASP.NET Core MVC, C#, Python, Flask, Entity Framework |
 | **Database** | SQL Server, MongoDB |
 | **API** | REST API, SCB API, TMDB API |
 | **DevOps** | Docker, Git, GitHub Pages, Render.com |
 | **Mobil** | Kotlin, Android Studio, Expo |
-| **Övrigt** | Three.js, WebGL, SEO, Parallax |
+| **Övrigt** | Three.js, WebGL, SEO, Parallax, PWA |
 
 ---
 
