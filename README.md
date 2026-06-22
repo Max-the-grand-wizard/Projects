@@ -34,6 +34,7 @@ Jag är en webbutvecklare som gillar att   att skapa responsiva, användarvänli
 
 Portföljen är uppdelad i fyra kategorier:
 
+-  **Utvalda projekt** 
 -  **Webbapplikationer** – Fullstack-appar med backend och databas
 -  **Statiska webbplatser & UI** – Responsiva sidor med fokus på design och UX
 -  **Kreativa & Portfolio** – Experimentella och visuella projekt
